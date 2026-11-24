@@ -1,0 +1,39 @@
+import gc
+
+# Create bucket list
+bucket_list = []
+
+# Add elements to the bucket list
+bucket_list.append("Apple")
+bucket_list.append("Banana")
+bucket_list.append("Mango")
+
+print("Bucket List:", bucket_list)
+
+# Check garbage collection status
+print("\nGarbage Collection Status:")
+print("Garbage Collector Enabled:", gc.isenabled())
+
+# Get garbage collection count
+print("Garbage Collection Count:", gc.get_count())
+
+# Disable garbage collection
+gc.disable()
+print("\nGarbage Collection Disabled:", not gc.isenabled())
+
+# Enable garbage collection
+gc.enable()
+print("Garbage Collection Enabled:", gc.isenabled())
+
+# Manually perform garbage collection
+collected = gc.collect()
+print("\nGarbage Collected Objects:", collected)
+
+# Clear bucket list
+bucket_list.clear()
+
+# Perform garbage collection again
+collected = gc.collect()
+print("Garbage Collected Objects After Clearing List:", collected)
+
+print("\nExperiment Completed.")
