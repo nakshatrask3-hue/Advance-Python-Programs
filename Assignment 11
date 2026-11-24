@@ -1,0 +1,65 @@
+import pandas as pd
+import numpy as np
+
+# Step 1: Create a Pandas Series with 10 random numbers
+data = np.random.randint(1, 100, 10)   # random integers between 1 and 100
+series = pd.Series(data)
+
+print("Series of 10 Random Numbers:")
+print(series)
+
+# Step 2: Indexing
+print("\nAccessing element at index 3:", series[3])
+print("Accessing first 5 elements:\n", series[:5])
+
+# Step 3: Filtering
+print("\nFiltering numbers greater than 50:")
+print(series[series > 50])
+
+# Step 4: Statistical Operations
+print("\nStatistical Operations:")
+print("Mean   :", series.mean())
+print("Median :", series.median())
+print("Minimum:", series.min())
+print("Maximum:", series.max())
+
+
+
+
+#OUTPUT
+
+Series of 10 Random Numbers:
+0    12
+1    87
+2    45
+3    63
+4    29
+5    94
+6    56
+7    71
+8    38
+9    22
+dtype: int64
+
+Accessing element at index 3: 63
+Accessing first 5 elements:
+ 0    12
+1    87
+2    45
+3    63
+4    29
+dtype: int64
+
+Filtering numbers greater than 50:
+1    87
+3    63
+5    94
+6    56
+7    71
+dtype: int64
+
+Statistical Operations:
+Mean   : 51.7
+Median : 50.5
+Minimum: 12
+Maximum: 94
